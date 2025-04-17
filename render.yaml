@@ -1,0 +1,11 @@
+
+services:
+  - type: web
+    name: api-flask-jeu
+    env: python
+    plan: free
+    buildCommand: ""
+    startCommand: python api.py
+    envVars:
+      - key: FLASK_ENV
+        value: production
