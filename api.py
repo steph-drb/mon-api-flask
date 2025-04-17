@@ -65,7 +65,7 @@ def add_score():
     score_value = data.get('score')
     user_id = data.get('user_id')
     if not score_value or not user_id:
-        return make_response('Score ou ID de l'utilisateur manquant', 400)
+        return make_response("Score ou ID de l'utilisateur manquant", 400)
     new_score = Score(score=score_value, user_id=user_id)
     db.session.add(new_score)
     db.session.commit()
