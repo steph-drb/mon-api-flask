@@ -34,7 +34,7 @@ def login_user():
     if user and user.password == password:
         score = Score.query.filter_by(user_id=user.id).order_by(Score.id.desc()).first()
         return jsonify({"ida": user.id}), 200
-    return make_response('Erreur dauthentification', 401)
+    return make_response("Erreur dauthentification", 401)
 
 @app.route("/api/users/score", methods=["POST"])
 def score_of_user():
@@ -45,7 +45,7 @@ def score_of_user():
     if user and user.password == password:
         score = Score.query.filter_by(user_id=user.id).order_by(Score.id.desc()).first()
         return jsonify({"score": score.score if score else 0}), 200
-    return make_response('Erreur d'authentification', 401)
+    return make_response("Erreur d'authentification", 401)
 
 @app.route("/api/users/register", methods=["POST"])
 def register_user():
