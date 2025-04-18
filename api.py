@@ -7,7 +7,7 @@ app = Flask(__name__)
 CORS(app)
 
 app.config['SECRET_KEY'] = 'your_secret_key'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://steph:Neboolisa2005@localhost/incremental_game'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://steph:EudVLUL5n54OihQJVVcIlfcOWLiy2QQW@dpg-d00oqsidbo4c73di3lhg-a.frankfurt-postgres.render.com/incremental_game'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
