@@ -1,4 +1,4 @@
 Flask
 Flask-SQLAlchemy
-PyMySQL
 flask-cors
+psycopg2-binary
