@@ -98,7 +98,7 @@ def update_score():
 def get_top_scores():
     top_scores = User.query.join(Score).order_by(Score.score.desc()).limit(5).all()
     results = ','.join(f"{user.pseudo}:{user.scores[0].score}" for user in top_scores)
-    return results, 200
+    return results, 700
 
 
 
