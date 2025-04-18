@@ -102,7 +102,11 @@ def get_top_scores():
 
 
 
+
 if __name__ == '__main__':
-    port = int(os.environ.get("PORT", 5000))  # Render donnera un port via la variable PORT
+    port = int(os.environ.get("PORT", 5000))
+    with app.app_context():
+        db.create_all()  # Crée les tables dans la base PostgreSQL
     app.run(debug=True, host='0.0.0.0', port=port)
+
 
